@@ -1,0 +1,7 @@
+service ril-daemon4 /system/bin/rild -l /system/lib/libril-v7r1.so
+    class main
+    socket rild stream 660 root radio
+    socket rild-debug stream 660 radio system
+    user root
+    group radio cache inet misc audio log sdcard_rw root net_admin
+
